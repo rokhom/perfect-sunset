@@ -22,8 +22,8 @@
 </script>
 <style scoped>
     .container {
-        display: flex;
-        flex-direction: row;
-        z-index: 2;
+      display: flex;
+      flex-direction: row;
+      z-index: 2;
     }
 </style>
