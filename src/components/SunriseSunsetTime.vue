@@ -1,6 +1,8 @@
 <template>
   <div v-if="info">
+    <div>The sun rises at</div>
     {{convertTime(info.sys.sunrise)}}
+    <div>The sun set at</div>
     {{convertTime(info.sys.sunset)}}
   </div>
 </template>

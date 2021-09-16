@@ -1,6 +1,7 @@
 <template>
   <div v-if="info">
-    <div v-for="clouds in info.clouds" :key="clouds" class="clouds">{{ clouds }}</div>
+    <div>Cloudiness</div>
+    <div v-for="clouds in info.clouds" :key="clouds" class="clouds">{{ clouds }}%</div>
   </div>
 </template>
 <script>
