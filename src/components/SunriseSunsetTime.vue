@@ -36,5 +36,6 @@
     display: block;
     width: 20px;
     height: 20px;
+    z-index: 1;
   }
 </style>

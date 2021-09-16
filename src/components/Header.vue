@@ -24,5 +24,6 @@
     .container {
         display: flex;
         flex-direction: row;
+        z-index: 2;
     }
 </style>

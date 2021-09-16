@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: row;
     margin: 10px;
+    z-index: 2;
   }
   .menu {
     display: flex;

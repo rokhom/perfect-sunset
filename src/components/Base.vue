@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="wrapper">
+    <background-img></background-img>
     <Header></Header>
     <div class="main">
     <current-weather></current-weather>
@@ -15,13 +16,15 @@ import Header from './Header.vue'
 import Footer from './Footer.vue';
 import CurrentWeather from './CurrentWeather.vue';
 import SunriseSunsetTime from './SunriseSunsetTime.vue';
+import BackgroundImg from './BackgroundImg.vue';
 
 export default {
   components: {
     Header,
     Footer,
     CurrentWeather,
-    SunriseSunsetTime
+    SunriseSunsetTime,
+    BackgroundImg
   },
 };
 </script>
@@ -49,18 +52,19 @@ time, mark, audio, video {
 }
 body {
   color: #ffffff;
-  background-image: url("https://live.staticflickr.com/65535/51470212945_3c4ae10008_b.jpg");
-  background-repeat: no-repeat;
+  /* background-image: url("https://live.staticflickr.com/65535/51470212945_3c4ae10008_b.jpg");
+  background-repeat: no-repeat; */
   background-size: 100% 100%;
   height: 100vh;
   margin: 0 0;
 }
 .wrapper {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 .main {
   max-height: 90vh;
   min-height: 80vh;
+  z-index: 2;
 }
 </style>
