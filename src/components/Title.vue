@@ -4,11 +4,11 @@
   </div>
 </template>
 <script>
-  export default {};
+export default {};
 </script>
 <style scoped>
-  .container {
-    display: flex;
-    margin: 10px;
-  }
+.container {
+  display: flex;
+  margin: 10px;
+}
 </style>

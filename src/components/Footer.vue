@@ -1,13 +1,16 @@
 <template>
-  <div  class="navs">
-    <div>Footer</div>
+  <div  class="footer">
+    <div>Weather API from momentjs.com | pictures: Roksolana Khomenko</div>
   </div>
 </template>
 <script>
   export default {};
 </script>
 <style scoped>
-  .navs {
+  .footer {
+    display: flex;
+    justify-content: center;
     z-index: 3;
+    font-size: small;
   }
 </style>

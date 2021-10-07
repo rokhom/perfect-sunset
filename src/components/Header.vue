@@ -1,29 +1,34 @@
 <template>
   <div class="container">
-      <Title></Title>
-      <Menu :menu="menu"/>
+    <ul class="menu">
+      <li class="m-item" v-for="item in menu" v-bind:key="item">
+        {{ item }}
+      </li>
+    </ul>
   </div>
 </template>
 <script>
-  import Title from './Title.vue'
-  import Menu from './Menu.vue'
-
-  export default {
-  components: {
-    Title,
-    Menu,
+export default {
+  props: {
+    menu: [Array],
   },
-  data () {
-    return {
-      menu: ['About', 'Gallery']
-    }
-  }
+  data() {
+    return {};
+  },
 };
 </script>
 <style scoped>
-    .container {
-      display: flex;
-      flex-direction: row;
-      z-index: 2;
-    }
+.container {
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+.m-item {
+  display: flex;
+  margin: 10px;
+}
 </style>
