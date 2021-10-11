@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="wrapper">
-      <background-img :imgArray="imgArray"></background-img>
+      <Slider :imgArray="imgArray"></Slider>
       <Header :menu="menu"></Header>
-      <div class="main">
+      <div class="main-wrapper">
         <current-weather></current-weather>
         <sunrise-sunset-time></sunrise-sunset-time>
       </div>
@@ -16,7 +16,7 @@ import Header from "./Header.vue";
 import Footer from "./Footer.vue";
 import CurrentWeather from "./CurrentWeather.vue";
 import SunriseSunsetTime from "./SunriseSunsetTime.vue";
-import BackgroundImg from "./BackgroundImg.vue";
+import Slider from "./Slider.vue";
 
 export default {
   components: {
@@ -24,7 +24,7 @@ export default {
     Footer,
     CurrentWeather,
     SunriseSunsetTime,
-    BackgroundImg,
+    Slider,
   },
   data() {
     return {
@@ -39,7 +39,7 @@ export default {
         "https://live.staticflickr.com/65535/51470209735_e0a216265f_b.jpg",
         "https://live.staticflickr.com/65535/51469522398_61195a31cd_b.jpg",
       ],
-      menu: ["Is perfect sunset today?"],
+      menu: ["Perfect sunset in Lviv"],
     };
   },
 };
@@ -152,7 +152,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main {
+.main-wrapper {
   max-height: 90vh;
   min-height: 80vh;
   z-index: 2;
@@ -162,5 +162,11 @@ body {
   align-items: center;
   font-family: "Glory", sans-serif;
   font-weight: 900;
+}
+@media (max-width: 500px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

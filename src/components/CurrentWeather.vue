@@ -1,42 +1,35 @@
 <template>
-  <div class="current-weather" v-if="info">
+  <div class="current-weather" v-if="$store.state.dataWeather">
     <div class="clouds-description">Cloudiness now:</div>
-    <span v-for="clouds in info.clouds" :key="clouds" class="clouds">
+    <span v-for="clouds in $store.state.dataWeather.clouds" :key="clouds" class="clouds">
       {{ clouds }}%
     </span>
     <div class="decision"> {{ decision }} </div>
   </div>
 </template>
 <script>
-import axios from "axios";
 
 export default {
   data() {
     return {
-      info: null,
       decision: null,
     };
   },
   methods: {
-    async mghjhjh() {
-      await axios
-        .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=lviv&appid=bdaf1e29c49b1e89b37ab6ccc792494e`
-        )
-        .then((response) => {
-          console.log("this.response", response);
-          this.info = response.data;
-        });
-      console.log("this.this.info", this.info);
-      if (this.info.clouds.all > 81) {
-        this.decision = "If clouds > 80%, not the best to take pictures of sunrise or sunset";
-      } else if (this.info.clouds.all <= 80) {
-        this.decision = "Good to take pictures";
-      }
+    isCloudinessHigh(){
+      if (this.$store.state.dataWeather.clouds.all > 81) this.decision = "If clouds > 80%, not the best to take pictures of sunrise or sunset"; 
     },
+    isCloudinessGood(){
+      if (this.$store.state.dataWeather.clouds.all <= 80) this.decision = "Good to take pictures";
+    },
+    setDecision(){
+      this.isCloudinessHigh()
+      this.isCloudinessGood()
+    }
   },
-  mounted() {
-    this.mghjhjh();
+  async mounted() {
+    await this.$store.dispatch('fetchWeather');
+    this.setDecision()
   },
 };
 </script>
