@@ -15,18 +15,13 @@ export default new Vuex.Store({
           `https://api.openweathermap.org/data/2.5/weather?q=lviv&appid=bdaf1e29c49b1e89b37ab6ccc792494e`
         )
         .then((response) => {
-          ctx.state.dataWeather = response.data;
+          ctx.commit('setWeather', response.data)
         });
-        console.log(ctx)
     },
   },
   mutations: {
-  },  
-  getters: {
-  }, 
-  modules: {
-  }
+    setWeather(state, dataWeather) {
+      state.dataWeather = dataWeather
+    }
+  },
 })
-
-
-
