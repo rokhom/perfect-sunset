@@ -1,6 +1,6 @@
 <template>
   <div  class="footer">
-    <div>Weather API from momentjs.com | pictures: Roksolana Khomenko</div>
+    <div>Weather API from momentjs.com</div>
   </div>
 </template>
 <script>

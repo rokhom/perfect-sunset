@@ -34,19 +34,19 @@ export default {
 };
 </script>
 <style scoped>
-.clouds {
-  display: block;
-}
-.clouds-description {
-  font-weight: 200;
-  font-size: large;
-}
-.decision {
-  font-size: xx-large;
-}
-.current-weather {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .clouds {
+    display: block;
+  }
+  .clouds-description {
+    font-weight: 200;
+    font-size: large;
+  }
+  .decision {
+    font-size: xx-large;
+  }
+  .current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>

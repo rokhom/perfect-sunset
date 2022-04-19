@@ -35,7 +35,6 @@ export default {
       if (n > slides.length - 1) {
         this.slideIndex = 1;
       }
-      console.log(this.slideIndex);
       if (n < 1) {
         this.slideIndex = slides.length - 1;
       }
@@ -48,31 +47,30 @@ export default {
 };
 </script>
 <style scoped>
-img {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
-.slider {
-  max-width: 100%;
-  position: relative;
-}
+  img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  .slider {
+    max-width: 100%;
+    position: relative;
+  }
+  .slider .previous,
+  .slider .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: 172px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 3;
+  }
 
-.slider .previous,
-.slider .next {
-  cursor: pointer;
-  position: absolute;
-  width: auto;
-  margin-top: 172px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 3;
-}
-
-.slider .next {
-  right: 0;
-}
+  .slider .next {
+    right: 0;
+  }
 </style>

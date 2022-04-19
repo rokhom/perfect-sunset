@@ -27,20 +27,19 @@ export default {
 };
 </script>
 <style scoped>
-.clouds {
-  background-color: blue;
-  display: block;
-  width: 20px;
-  height: 20px;
-  z-index: 1;
-}
-.sunrise-sunset-time {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.start-time {
-  font-size: xx-large;
-}
+  .clouds {
+    background-color: blue;
+    display: block;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+  }
+  .sunrise-sunset-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start-time {
+    font-size: xx-large;
+  }
 </style>

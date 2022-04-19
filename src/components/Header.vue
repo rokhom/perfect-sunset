@@ -18,17 +18,17 @@ export default {
 };
 </script>
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: row;
-  z-index: 4;
-}
-.menu {
-  display: flex;
-  list-style: none;
-}
-.m-item {
-  display: flex;
-  margin: 10px;
-}
+  .container {
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+  }
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  .m-item {
+    display: flex;
+    margin: 10px;
+  }
 </style>
